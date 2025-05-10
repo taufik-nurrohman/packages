@@ -524,9 +524,9 @@ const setHTML = (node, content, trim = true) => {
 
 const setID = (node, value, batch = 'e:') => setAttribute(node, 'id', isSet(value) ? value : getID(node, batch));
 
-const setNext = (current, node) => (node.after(current), node);
+const setNext = (current, node) => (current.after(node), node);
 
-const setPrev = (current, node) => (node.before(current), node);
+const setPrev = (current, node) => (current.before(node), node);
 
 const setRole = (node, value) => setAttribute(node, 'role', value);
 
