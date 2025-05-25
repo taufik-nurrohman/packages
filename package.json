@@ -22,6 +22,7 @@
     "interval",
     "repeat",
     "restrict",
+    "stay",
     "throttle",
     "tick",
     "time",
@@ -34,5 +35,5 @@
     "type": "git",
     "url": "git+https://github.com/taufik-nurrohman/tick.git"
   },
-  "version": "2.1.0"
+  "version": "2.1.1"
 }
