@@ -1,0 +1,33 @@
+{
+  "author": "Taufik Nurrohman",
+  "bugs": "https://github.com/taufik-nurrohman/file/issues",
+  "description": "File system utility.",
+  "devDependencies": {
+    "ava": "^8.0.1"
+  },
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "index.mjs"
+  ],
+  "homepage": "https://taufik-nurrohman.js.org",
+  "keywords": [
+    "file",
+    "helper",
+    "utility"
+  ],
+  "license": "MIT",
+  "main": "index.mjs",
+  "name": "@taufik-nurrohman/file",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taufik-nurrohman/file.git"
+  },
+  "scripts": {
+    "test": "ava test.mjs"
+  },
+  "version": "1.0.1"
+}
