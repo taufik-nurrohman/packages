@@ -4,16 +4,6 @@ Regular Expression Utility
 Usage
 -----
 
-### CommonJS
-
-~~~ js
-const {toPattern} = require('@taufik-nurrohman/pattern');
-
-console.log(toPattern('[a-z]+'));
-~~~
-
-### ECMAScript
-
 ~~~ js
 import {toPattern} from '@taufik-nurrohman/pattern';
 

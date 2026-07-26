@@ -11,20 +11,6 @@ Utility functions to do time-related tasks.
 Usage
 -----
 
-### CommonJS
-
-~~~ js
-const {debounce} = require('@taufik-nurrohman/tick');
-
-const [debounceStart] = debounce(() => {
-    console.log('resize');
-});
-
-window.addEventListener('resize', debounceStart(1000));
-~~~
-
-### ECMAScript
-
 ~~~ js
 import {debounce} from '@taufik-nurrohman/tick';
 

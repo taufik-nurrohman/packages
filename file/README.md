@@ -6,20 +6,6 @@ Utility functions of native file system API in Node.js. Not to be used in the br
 Usage
 -----
 
-### CommonJS
-
-~~~ js
-const {getContent, setContent} = require('@taufik-nurrohman/file');
-
-let content = getContent('./package.json');
-
-if (null !== content) {
-    setContent('./package.json', content.replace(/"/g, "'"));
-}
-~~~
-
-### ECMAScript
-
 ~~~ js
 import {getContent, setContent} from '@taufik-nurrohman/file';
 

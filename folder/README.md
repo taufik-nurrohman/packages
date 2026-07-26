@@ -6,16 +6,6 @@ Utility functions of native folder system API in Node.js. Not to be used in the 
 Usage
 -----
 
-### CommonJS
-
-~~~ js
-const {getContent} = require('@taufik-nurrohman/folder');
-
-console.log(getContent('./node_modules', 1, true));
-~~~
-
-### ECMAScript
-
 ~~~ js
 import {getContent} from '@taufik-nurrohman/folder';
 

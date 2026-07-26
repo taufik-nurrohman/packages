@@ -6,21 +6,6 @@ Utility of native event listener implementation.
 Usage
 -----
 
-### CommonJS
-
-~~~ js
-const {onEvent} = require('@taufik-nurrohman/event');
-
-onEvent('resize', window, e => {
-    console.log([
-        window.innerHeight,
-        window.innerWidth
-    ]);
-});
-~~~
-
-### ECMAScript
-
 ~~~ js
 import {onEvent} from '@taufik-nurrohman/event';
 

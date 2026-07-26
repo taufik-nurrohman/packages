@@ -6,19 +6,6 @@ HTML document object utility.
 Usage
 -----
 
-### CommonJS
-
-~~~ js
-const {setElement} = require('@taufik-nurrohman/document');
-
-console.log(setElement('div', 'Content goes here.', {
-    'class': 'bar foo',
-    'id': 'baz'
-}));
-~~~
-
-### ECMAScript
-
 ~~~ js
 import {setElement} from '@taufik-nurrohman/document';
 

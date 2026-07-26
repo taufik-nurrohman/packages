@@ -6,16 +6,6 @@ Convert double quote to single quote in string and vice-versa.
 Usage
 -----
 
-### CommonJS
-
-~~~ js
-const {toggleQuote} = require('@taufik-nurrohman/quote');
-
-console.log(toggleQuote(`foo "bar" baz 'qux'`));
-~~~
-
-### ECMAScript
-
 ~~~ js
 import {toggleQuote} from '@taufik-nurrohman/quote';
 

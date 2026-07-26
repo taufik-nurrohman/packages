@@ -6,22 +6,6 @@ JavaScript hook system.
 Usage
 -----
 
-### CommonJS
-
-~~~ js
-const {hook} = require('@taufik-nurrohman/hook');
-
-hook(window);
-
-window.on('click', () => console.log('click 1'));
-window.on('click', () => console.log('click 2'));
-window.on('focus', () => console.log('focus 1'));
-
-console.log(window.hooks);
-~~~
-
-### ECMAScript
-
 ~~~ js
 import {hook} from '@taufik-nurrohman/hook';
 

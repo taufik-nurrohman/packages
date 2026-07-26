@@ -4,16 +4,6 @@ Rect Utility
 Usage
 -----
 
-### CommonJS
-
-~~~ js
-const {getOffset} = require('@taufik-nurrohman/rect');
-
-console.log(getOffset(document.querySelector('#pane')));
-~~~
-
-### ECMAScript
-
 ~~~ js
 import {getOffset} from '@taufik-nurrohman/rect';
 

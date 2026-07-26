@@ -8,16 +8,6 @@ These functions are very inspired by PHP which already has standard functions su
 Usage
 -----
 
-### CommonJS
-
-~~~ js
-const {isString} = require('@taufik-nurrohman/is');
-
-console.log(isString('false'));
-~~~
-
-### ECMAScript
-
 ~~~ js
 import {isString} from '@taufik-nurrohman/is';
 

@@ -3,15 +3,8 @@ Converter Utility
 
 Convert to X from Y.
 
-### CommonJS
-
-~~~ js
-const {toNumber} = require('@taufik-nurrohman/to');
-
-console.log(toNumber('1'));
-~~~
-
-### ECMAScript
+Usage
+-----
 
 ~~~ js
 import {toNumber} from '@taufik-nurrohman/to';
