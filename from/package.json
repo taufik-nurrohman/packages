@@ -1,0 +1,32 @@
+{
+  "author": "Taufik Nurrohman",
+  "bugs": "https://github.com/taufik-nurrohman/from/issues",
+  "dependencies": {
+    "@taufik-nurrohman/has": "*",
+    "@taufik-nurrohman/is": "*",
+    "@taufik-nurrohman/to": "*"
+  },
+  "description": "Convert from X to Y.",
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "index.mjs"
+  ],
+  "homepage": "https://taufik-nurrohman.js.org",
+  "keywords": [
+    "converter",
+    "helper",
+    "utility"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@taufik-nurrohman/from",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taufik-nurrohman/from.git"
+  },
+  "version": "1.1.0"
+}
