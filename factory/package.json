@@ -1,0 +1,54 @@
+{
+  "author": "Taufik Nurrohman",
+  "bin": {
+    "pack": "./index.mjs"
+  },
+  "bugs": "https://github.com/taufik-nurrohman/factory/issues",
+  "dependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
+    "@babel/plugin-transform-private-methods": "^7.27.1",
+    "@babel/preset-env": "^7.28.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@taufik-nurrohman/file": "*",
+    "@taufik-nurrohman/folder": "*",
+    "clean-css": "^5.3.3",
+    "js-beautify": "^1.15.4",
+    "node-fetch": "^3.3.2",
+    "pug": "^3.0.3",
+    "rollup": "^4.44.2",
+    "sass": "^1.89.2",
+    "terser": "^5.43.1",
+    "yargs": "^18.0.0"
+  },
+  "description": "Simple Node.js script to generate CSS, HTML, and JavaScript files from ECMAScript, Pug, and SCSS files.",
+  "files": [
+    "index.mjs"
+  ],
+  "homepage": "https://taufik-nurrohman.js.org",
+  "keywords": [
+    "cli",
+    "css",
+    "html",
+    "js",
+    "mjs",
+    "pug",
+    "scss"
+  ],
+  "license": "MIT",
+  "main": "index.mjs",
+  "name": "@taufik-nurrohman/factory",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taufik-nurrohman/factory.git"
+  },
+  "scripts": {
+    "test": "node index.mjs --from=test --js-name=test --mjs --pug --scss --to=result",
+    "test-cjs": "node index.mjs --js-format=cjs --from=test --js-name=test --mjs --pug --scss --to=result",
+    "test-umd": "node index.mjs --js-format=umd --from=test --js-name=test --mjs --pug --scss --to=result"
+  },
+  "type": "module",
+  "version": "2.3.1"
+}
