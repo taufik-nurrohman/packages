@@ -1,7 +1,7 @@
-import {forEachArray, forEachObject} from '@taufik-nurrohman/f';
-import {fromJSON, fromURL, fromValue} from '@taufik-nurrohman/from';
-import {isArray, isInstance, isNumber, isObject, isSet, isString} from '@taufik-nurrohman/is';
-import {toCaseCamel, toCaseLower, toCount, toJSON, toString as _toString, toValue} from '@taufik-nurrohman/to';
+import {forEachArray, forEachObject} from '../f';
+import {fromJSON, fromURL, fromValue} from '../from';
+import {isArray, isInstance, isNumber, isObject, isSet, isString} from '../is';
+import {toCaseCamel, toCaseLower, toCount, toJSON, toString as _toString, toValue} from '../to';
 
 let theCookies = 0;
 

@@ -1,6 +1,6 @@
-import {hasValue} from '@taufik-nurrohman/has';
-import {isArray, isObject, isSet} from '@taufik-nurrohman/is';
-import {toCount, toObjectCount, toValue} from '@taufik-nurrohman/to';
+import {hasValue} from '../has';
+import {isArray, isObject, isSet} from '../is';
+import {toCount, toObjectCount, toValue} from '../to';
 
 export const fromArray = x => {
     if (isArray(x)) {

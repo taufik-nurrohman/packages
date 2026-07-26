@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import * as file from '@taufik-nurrohman/file';
-import * as folder from '@taufik-nurrohman/folder';
+import * as file from '../file';
+import * as folder from '../folder';
 import beautify from 'js-beautify';
 import cleancss from 'clean-css';
 import commonJS from '@rollup/plugin-commonjs';

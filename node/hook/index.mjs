@@ -1,6 +1,6 @@
-import {forEachArray} from '@taufik-nurrohman/f';
-import {isSet} from '@taufik-nurrohman/is';
-import {toCount} from '@taufik-nurrohman/to';
+import {forEachArray} from '../f';
+import {isSet} from '../is';
+import {toCount} from '../to';
 
 export function hook($, $$) {
     $$ = $$ || $;

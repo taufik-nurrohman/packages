@@ -1,4 +1,4 @@
-import {B, R, W, isWindow, setStyles} from '@taufik-nurrohman/document';
+import {B, R, W, isWindow, setStyles} from '../document';
 
 export const getAxis = (event, node) => {
     let touches = event.touches,

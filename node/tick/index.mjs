@@ -1,5 +1,5 @@
-import {W} from '@taufik-nurrohman/document';
-import {isInteger} from '@taufik-nurrohman/is';
+import {W} from '../document';
+import {isInteger} from '../is';
 
 function _toArray(iterable) {
     return Array.from(iterable);

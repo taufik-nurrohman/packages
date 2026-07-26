@@ -1,7 +1,7 @@
-import {D, getChildFirst, getChildren, getHTML, getType, setChildLast, setElement, setHTML} from '@taufik-nurrohman/document';
-import {forEachArray, getValueInMap, hasKeyInMap, letValueInMap, setValueInMap} from '@taufik-nurrohman/f';
-import {isArray, isString} from '@taufik-nurrohman/is';
-import {toCount} from '@taufik-nurrohman/to';
+import {D, getChildFirst, getChildren, getHTML, getType, setChildLast, setElement, setHTML} from '../document';
+import {forEachArray, getValueInMap, hasKeyInMap, letValueInMap, setValueInMap} from '../f';
+import {isArray, isString} from '../is';
+import {toCount} from '../to';
 
 const {now} = Date;
 

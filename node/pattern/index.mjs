@@ -1,5 +1,5 @@
-import {isArray, isInstance, isSet} from '@taufik-nurrohman/is';
-import {toArray, toCount} from '@taufik-nurrohman/to';
+import {isArray, isInstance, isSet} from '../is';
+import {toArray, toCount} from '../to';
 
 export const esc = (pattern, extra = "") => pattern.replace(toPattern('[' + extra + x.replace(/./g, '\\$&') + ']'), '\\$&');
 

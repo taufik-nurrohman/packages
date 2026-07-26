@@ -1,5 +1,5 @@
-import {isFunction} from '@taufik-nurrohman/is';
-import {toCount} from '@taufik-nurrohman/to';
+import {isFunction} from '../is';
+import {toCount} from '../to';
 
 function _toIterator(v) {
     return v[Symbol.iterator]();
