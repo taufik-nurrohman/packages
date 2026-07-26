@@ -5,7 +5,6 @@
   "homepage": "https://taufik-nurrohman.js.org/packages",
   "license": "MIT",
   "name": "@taufik-nurrohman/packages",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/taufik-nurrohman/packages.git"
