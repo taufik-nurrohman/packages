@@ -12,21 +12,6 @@
   },
   "version": "1.0.0",
   "workspaces": [
-    "document",
-    "event",
-    "f",
-    "factory",
-    "file",
-    "folder",
-    "from",
-    "has",
-    "hook",
-    "is",
-    "pattern",
-    "quote",
-    "rect",
-    "selection",
-    "tick",
-    "to"
+    "node/*"
   ]
 }
