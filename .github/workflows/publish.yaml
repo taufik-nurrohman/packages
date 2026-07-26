@@ -25,8 +25,8 @@ jobs:
             # Save root directory location so 'cd' returns reliably
             ROOT_DIR=$(pwd)
             cd "$dir"
-            NAME=$(npm pkg get name | tr -d '"')
-            VERSION=$(npm pkg get version | tr -d '"')
+            NAME=$(node -p "require('./package.json').name")
+            VERSION=$(node -p "require('./package.json').version")
             if npm view "$NAME@$VERSION" >/dev/null 2>&1; then
               echo "Already published: $NAME@$VERSION"
             else
