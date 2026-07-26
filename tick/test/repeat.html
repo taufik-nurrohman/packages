@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta content="width=device-width" name="viewport">
+    <meta charset="utf-8">
+    <title>Repeat</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "@taufik-nurrohman/document": "https://unpkg.com/@taufik-nurrohman/document@latest/index.mjs",
+          "@taufik-nurrohman/f": "https://unpkg.com/@taufik-nurrohman/f@latest/index.mjs",
+          "@taufik-nurrohman/from": "https://unpkg.com/@taufik-nurrohman/from@latest/index.mjs",
+          "@taufik-nurrohman/has": "https://unpkg.com/@taufik-nurrohman/has@latest/index.mjs",
+          "@taufik-nurrohman/is": "https://unpkg.com/@taufik-nurrohman/is@latest/index.mjs",
+          "@taufik-nurrohman/tick": "https://unpkg.com/@taufik-nurrohman/tick@latest/index.mjs",
+          "@taufik-nurrohman/to": "https://unpkg.com/@taufik-nurrohman/to@latest/index.mjs"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Click and hold the button for one second! The result will update every 10 milliseconds until you release the button.</p>
+    <p>
+      <button>Today</button>
+    </p>
+    <p role="status" style="color: #060;"></p>
+    <script type="module">
+      import {repeat} from '@taufik-nurrohman/tick';
+      const [repeatStart, repeatStop] = repeat(function () {
+          p.innerHTML = 'Today is ' + (new Date).toISOString();
+      }, 1000, 10);
+      const button = document.querySelector('button');
+      const p = document.querySelectorAll('p')[2];
+      if ('ontouchstart' in window) {
+          // Prevent context menu on long press
+          button.addEventListener('contextmenu', e => e.preventDefault());
+          // Prevent text selection on long press
+          button.style.userSelect = 'none';
+          button.addEventListener('touchstart', function () {
+              p.innerHTML = 'Today is ' + (new Date).toISOString();
+              repeatStart();
+          });
+          document.addEventListener('touchend', function () {
+              repeatStop();
+          });
+      } else {
+          button.addEventListener('mousedown', function () {
+              p.innerHTML = 'Today is ' + (new Date).toISOString();
+              repeatStart();
+          });
+          document.addEventListener('mouseup', function () {
+              repeatStop();
+          });
+      }
+    </script>
+  </body>
+</html>

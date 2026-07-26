@@ -1,0 +1,39 @@
+{
+  "author": "Taufik Nurrohman",
+  "bugs": "https://github.com/taufik-nurrohman/tick/issues",
+  "dependencies": {
+    "@taufik-nurrohman/document": "*",
+    "@taufik-nurrohman/is": "*"
+  },
+  "description": "Utility functions to do time-related tasks.",
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "index.mjs"
+  ],
+  "homepage": "https://taufik-nurrohman.js.org",
+  "keywords": [
+    "confine",
+    "debounce",
+    "delay",
+    "interval",
+    "repeat",
+    "restrict",
+    "stay",
+    "throttle",
+    "tick",
+    "time",
+    "utility"
+  ],
+  "license": "MIT",
+  "main": "index.mjs",
+  "name": "@taufik-nurrohman/tick",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taufik-nurrohman/tick.git"
+  },
+  "version": "2.1.1"
+}

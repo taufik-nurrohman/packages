@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta content="width=device-width" name="viewport">
+    <meta charset="utf-8">
+    <title>Confine</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "@taufik-nurrohman/document": "https://unpkg.com/@taufik-nurrohman/document@latest/index.mjs",
+          "@taufik-nurrohman/f": "https://unpkg.com/@taufik-nurrohman/f@latest/index.mjs",
+          "@taufik-nurrohman/from": "https://unpkg.com/@taufik-nurrohman/from@latest/index.mjs",
+          "@taufik-nurrohman/has": "https://unpkg.com/@taufik-nurrohman/has@latest/index.mjs",
+          "@taufik-nurrohman/is": "https://unpkg.com/@taufik-nurrohman/is@latest/index.mjs",
+          "@taufik-nurrohman/tick": "https://unpkg.com/@taufik-nurrohman/tick@latest/index.mjs",
+          "@taufik-nurrohman/to": "https://unpkg.com/@taufik-nurrohman/to@latest/index.mjs"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Click the button multiple times! The result will only update by the first click. You can update it again only if you stop clicking for at least one second.</p>
+    <p>
+      <button>Today</button>
+    </p>
+    <p role="status" style="color: #060;"></p>
+    <script type="module">
+      import {confine} from '@taufik-nurrohman/tick';
+      const [confineStart, confineContinue] = confine(function () {
+          p.innerHTML = 'Today is ' + (new Date).toISOString();
+      }, 1000);
+      const button = document.querySelector('button');
+      const p = document.querySelectorAll('p')[2];
+      button.addEventListener('click', function () {
+          confineStart();
+      });
+      // // Moving the pointer is considered “rude”. Continue the restriction!
+      // if ('ontouchstart' in window) {
+      //     document.addEventListener('touchmove', function () {
+      //         confineContinue();
+      //     });
+      // } else {
+      //     document.addEventListener('mousemove', function () {
+      //         confineContinue();
+      //     });
+      // }
+    </script>
+  </body>
+</html>
