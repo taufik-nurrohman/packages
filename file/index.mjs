@@ -1,8 +1,8 @@
 import {copyFileSync, existsSync, readFileSync, renameSync, statSync, unlinkSync, writeFileSync} from 'fs';
-import {basename, dirname, extname, normalize, resolve} from 'path';
+import {basename, dirname, extname, normalize, resolve, sep} from 'path';
 
 export const copy = (from, to, name) => {
-    to = normalize(to) + '/' + (name || basename(from));
+    to = normalize(to) + sep + (name || basename(from));
     copyFileSync(from, to);
 };
 
@@ -23,15 +23,16 @@ export const move = (from, to, name) => {
         unlinkSync(from);
     } else {
         to = normalize(to);
-        to += '/' + (name || basename(from));
+        to += sep + (name || basename(from));
         renameSync(from, to);
     }
 };
 
 export const name = (path, x = false) => {
-    let ext = extname(path = normalize(path));
-    let value = basename(path).slice(0, -ext.length);
-    value = x ? value + ('string' === typeof x ? '.' + x : ext) : value;
+    let parts = basename(path).split('.'),
+        ext = parts.pop(),
+        value = parts.join('.');
+    value = x ? value + '.' + ('string' === typeof x ? x : ext) : value;
     return "" !== value ? value : null;
 };
 

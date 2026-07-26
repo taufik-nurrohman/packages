@@ -1,10 +1,13 @@
 import {isSet} from '@taufik-nurrohman/is';
 
-export const event = (name, options, cache) => {
+export const event = (name, options = {}, cache) => {
     if (cache && isSet(events[name])) {
-        return events[name];
+        let [$, o] = events[name];
+        return new $(name, o);
     }
-    return (events[name] = new Event(name, options));
+    let {$ = Event, ...o} = options;
+    cache && (events[name] = [$, o]);
+    return new $(name, o);
 };
 
 export const events = {};

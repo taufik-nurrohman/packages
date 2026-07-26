@@ -19,6 +19,7 @@ ava('isFolder', t => {
 ava.todo('move');
 
 ava('name', t => {
+    t.is(f.name('./foo/bar/.baz'), '.baz');
     t.is(f.name('./foo/bar/baz'), 'baz');
     t.is(f.name('./foo/bar/baz.qux'), 'baz.qux');
 });

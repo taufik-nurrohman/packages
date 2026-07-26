@@ -23,9 +23,11 @@ ava('isFile', t => {
 ava.todo('move');
 
 ava('name', t => {
+    t.is(f.name('./foo/bar/.baz'), null);
+    t.is(f.name('./foo/bar/.baz', 'qux'), '.qux');
     t.is(f.name('./foo/bar/baz.qux'), 'baz');
-    t.is(f.name('./foo/bar/baz.qux', true), 'baz.qux');
     t.is(f.name('./foo/bar/baz.qux', 'asdf'), 'baz.asdf');
+    t.is(f.name('./foo/bar/baz.qux', true), 'baz.qux');
 });
 
 ava('parent', t => {

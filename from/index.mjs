@@ -13,7 +13,9 @@ export const fromArray = x => {
     }
     return x;
 };
+
 export const fromBoolean = x => {};
+
 export const fromHTML = (x, escapeQuote) => {
     x = x.replace(/&/g, '&amp;').replace(/>/g, '&gt;').replace(/</g, '&lt;');
     if (escapeQuote) {
@@ -21,6 +23,7 @@ export const fromHTML = (x, escapeQuote) => {
     }
     return x;
 };
+
 export const fromJSON = x => {
     let value = null;
     try {
@@ -28,17 +31,20 @@ export const fromJSON = x => {
     } catch(e) {}
     return value;
 };
+
 export const fromNumber = x => {};
+
 function _fromQueryDeep(o, props, value) {
     let prop = props.split('['), i, j = toCount(prop), k;
     for (i = 0; i < j - 1; ++i) {
         k = ']' === prop[i].slice(-1) ? prop[i].slice(0, -1) : prop[i];
-        k = "" === k ? toObjectCount(k) : k;
+        k = "" === k ? toObjectCount(o) : k;
         o = o[k] || (o[k] = {});
     }
     k = ']' === prop[i].slice(-1) ? prop[i].slice(0, -1) : prop[i];
     o["" === k ? toObjectCount(o) : k] = value;
 }
+
 export const fromQuery = (x, parseValue = true, defaultValue = true) => {
     let out = {}, q = x && '?' === x[0] ? x.slice(1) : x;
     if ("" === q) {
@@ -59,6 +65,7 @@ export const fromQuery = (x, parseValue = true, defaultValue = true) => {
     });
     return out;
 };
+
 export const fromStates = (...lot) => {
     let out = lot.shift();
     for (let i = 0, j = toCount(lot); i < j; ++i) {
@@ -87,11 +94,14 @@ export const fromStates = (...lot) => {
     }
     return out;
 };
+
 export const fromString = x => {};
+
 export const fromURL = x => decodeURIComponent(x);
+
 export const fromValue = x => {
     if (isArray(x)) {
-        return x.map(v => fromValue(x));
+        return x.map(v => fromValue(v));
     }
     if (isObject(x)) {
         for (let k in x) {

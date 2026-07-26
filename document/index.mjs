@@ -3,6 +3,8 @@ import {fromJSON, fromURL, fromValue} from '@taufik-nurrohman/from';
 import {isArray, isInstance, isNumber, isObject, isSet, isString} from '@taufik-nurrohman/is';
 import {toCaseCamel, toCaseLower, toCount, toJSON, toString as _toString, toValue} from '@taufik-nurrohman/to';
 
+let theCookies = 0;
+
 function _toArray(iterable) {
     return Array.from(iterable);
 }
@@ -80,9 +82,12 @@ export const getCookies = (parseValue = true) => {
         return parseValue ? toValue(theCookies) : theCookies;
     }
     let values = {};
-    forEachArray(D.cookie.split(/;\s*/), cookie => {
-        let [k, v] = cookie.split('=');
-        values[k] = v ? fromURL(v) : null;
+    forEachArray(D.cookie.split(';'), cookie => {
+        let i = (cookie = cookie.trim()).indexOf('='), v;
+        if (-1 !== i) {
+            v = cookie.slice(i + 1);
+            values[cookie.slice(0, i)] = "" !== v ? fromURL(v) : null;
+        }
     });
     theCookies = values; // Store to cache
     return parseValue ? toValue(values) : values;
@@ -144,7 +149,7 @@ export const getHTML = (node, trim = true) => {
     return "" !== content ? content : null;
 };
 
-export const getID = (node, batch = 'e:') => {
+export const getID = (node, batch = 'x:') => {
     if (hasID(node)) {
         return getAttribute(node, 'id');
     }
@@ -318,7 +323,7 @@ export const letClasses = (node, classes) => {
         return forEachArray(classes, k => letClass(node, k)), node;
     }
     if (isObject(classes)) {
-        return forEachObject(classes => (v, k) => v && letClass(node, k)), node;
+        return forEachObject(classes, (v, k) => v && letClass(node, k)), node;
     }
     return (node.className = ""), node;
 };
@@ -498,7 +503,7 @@ export const setElement = (node, content, attributes, options) => {
     node = isString(node) ? D.createElement(node, isString(options) ? {is: options} : options) : node;
     if (isArray(content) && toCount(content)) {
         letHTML(node);
-        forEachArray(content, v => setChildLast(isString(v) ? setElementText(v) : v));
+        forEachArray(content, v => setChildLast(node, isString(v) ? setElementText(v) : v));
     } else if (isObject(content)) {
         attributes = content;
         content = false;
@@ -522,7 +527,7 @@ export const setHTML = (node, content, trim = true) => {
     return hasState(node, state) && (node[state] = trim ? content.trim() : content), node;
 };
 
-export const setID = (node, value, batch = 'e:') => setAttribute(node, 'id', isSet(value) ? value : getID(node, batch));
+export const setID = (node, value, batch = 'x:') => setAttribute(node, 'id', isSet(value) ? value : getID(node, batch));
 
 export const setNext = (current, node) => (current.after(node), node);
 
@@ -597,8 +602,6 @@ export const toggleStates = (node, states) => {
     }
     return node;
 };
-
-let theCookies = 0;
 
 export const theHistory = W.history;
 

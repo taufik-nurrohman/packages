@@ -108,9 +108,13 @@ export const setReference = (key, value) => setValueInMap(key, value, references
 
 export const setValueInMap = (k, v, map) => map.set(k, v);
 
-export const toKeyFirstFromMap = map => toKeysFromMap(map).shift();
+export const toKeyFirstFromMap = map => map.keys().next().value;
 
-export const toKeyLastFromMap = map => toKeysFromMap(map).pop();
+export const toKeyLastFromMap = map => {
+    let key, last;
+    for (key of map.keys()) last = key;
+    return last;
+};
 
 export const toKeysFromMap = function (map) {
     let r = [];

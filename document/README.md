@@ -62,7 +62,7 @@ Convert element to array of element name, element content and element attributes
 
 ### getHTML(node, trim = true)
 
-### getID(node, batch = 'e:')
+### getID(node, batch = 'x:')
 
 Get element&rsquo;s ID or return an unique ID.
 

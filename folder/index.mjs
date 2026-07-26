@@ -1,5 +1,5 @@
 import {copyFileSync, existsSync, mkdirSync, readdirSync, renameSync, rmSync, rmdirSync, statSync} from 'fs';
-import {basename, dirname, extname, join, normalize, resolve} from 'path';
+import {basename, dirname, extname, join, normalize, resolve, sep} from 'path';
 
 import {isFunction, isNumber, isSet, isString} from '@taufik-nurrohman/is';
 
@@ -52,7 +52,7 @@ export const getContent = (path, x = null, deep = 0) => {
                 let scans = getContent(scan, x, true);
                 let j = path.length + 1;
                 for (let scan in scans) {
-                    let i = scan.slice(j).split(/[\\\/]/).length;
+                    let i = scan.slice(j).split(sep).length;
                     if (i > j) {
                         continue;
                     }
@@ -100,7 +100,7 @@ export const name = path => {
 
 export const parent = path => {
     let value = dirname(normalize(path));
-    return "" !== value && '.' !== value && '/' !== value ? resolve(value) : null;
+    return "" !== value && '.' !== value && sep !== value ? resolve(value) : null;
 };
 
 export const set = (path, deep = false) => {
