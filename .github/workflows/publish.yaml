@@ -1,0 +1,36 @@
+name: Publish
+on:
+  release:
+    types: [published]
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+      - name: Publish packages
+        shell: bash
+        run: |
+          set -e
+          for dir in */; do
+            [ -f "${dir}package.json" ] || continue
+            echo "::group::${dir}"
+            cd "$dir"
+            NAME=$(npm pkg get name | tr -d '"')
+            VERSION=$(npm pkg get version | tr -d '"')
+            if npm view "$NAME@$VERSION" >/dev/null 2>&1; then
+              echo "Already published: $NAME@$VERSION"
+            else
+              echo "Publishing $NAME@$VERSION"
+              npm publish --provenance --access public
+            fi
+            cd ..
+            echo "::endgroup::"
+          done
