@@ -1,0 +1,32 @@
+{
+  "author": "Taufik Nurrohman",
+  "bugs": "https://github.com/taufik-nurrohman/packages/issues",
+  "description": "Packages.",
+  "homepage": "https://taufik-nurrohman.js.org/packages",
+  "license": "MIT",
+  "name": "@taufik-nurrohman/packages",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taufik-nurrohman/packages.git"
+  },
+  "version": "1.0.0",
+  "workspaces": [
+    "document",
+    "event",
+    "f",
+    "factory",
+    "file",
+    "folder",
+    "from",
+    "has",
+    "hook",
+    "is",
+    "pattern",
+    "quote",
+    "rect",
+    "selection",
+    "tick",
+    "to"
+  ]
+}

@@ -1,26 +1,19 @@
 {
-  "author": "Taufik Nurrohman",
-  "bugs": "https://github.com/taufik-nurrohman/has/issues",
   "description": "Conditional utility.",
-  "exports": {
-    "import": "./index.mjs",
-    "require": "./index.js"
-  },
+  "exports": "./index.mjs",
   "files": [
-    "index.js",
     "index.mjs"
   ],
-  "homepage": "https://taufik-nurrohman.js.org",
   "keywords": [
     "helper",
     "utility"
   ],
   "license": "MIT",
-  "main": "index.js",
   "name": "@taufik-nurrohman/has",
   "repository": {
+    "directory": "has",
     "type": "git",
-    "url": "git+https://github.com/taufik-nurrohman/has.git"
+    "url": "git+https://github.com/taufik-nurrohman/packages.git"
   },
-  "version": "1.0.0"
+  "version": "2.0.0"
 }

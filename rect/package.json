@@ -1,19 +1,12 @@
 {
-  "author": "Taufik Nurrohman",
-  "bugs": "https://github.com/taufik-nurrohman/rect/issues",
   "dependencies": {
     "@taufik-nurrohman/document": "*"
   },
   "description": "Document, element, mouse and window position and dimension helpers.",
-  "exports": {
-    "import": "./index.mjs",
-    "require": "./index.js"
-  },
+  "exports": "./index.mjs",
   "files": [
-    "index.js",
     "index.mjs"
   ],
-  "homepage": "https://taufik-nurrohman.js.org",
   "keywords": [
     "dimension",
     "helper",
@@ -24,11 +17,14 @@
     "utility"
   ],
   "license": "MIT",
-  "main": "index.js",
   "name": "@taufik-nurrohman/rect",
   "repository": {
+    "directory": "rect",
     "type": "git",
-    "url": "git+https://github.com/taufik-nurrohman/rect.git"
+    "url": "git+https://github.com/taufik-nurrohman/packages.git"
   },
-  "version": "1.0.0"
+  "scripts": {
+    "test": "ava test.mjs"
+  },
+  "version": "2.0.0"
 }

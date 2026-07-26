@@ -1,20 +1,13 @@
 {
-  "author": "Taufik Nurrohman",
-  "bugs": "https://github.com/taufik-nurrohman/tick/issues",
   "dependencies": {
     "@taufik-nurrohman/document": "*",
     "@taufik-nurrohman/is": "*"
   },
   "description": "Utility functions to do time-related tasks.",
-  "exports": {
-    "import": "./index.mjs",
-    "require": "./index.js"
-  },
+  "exports": "./index.mjs",
   "files": [
-    "index.js",
     "index.mjs"
   ],
-  "homepage": "https://taufik-nurrohman.js.org",
   "keywords": [
     "confine",
     "debounce",
@@ -29,11 +22,11 @@
     "utility"
   ],
   "license": "MIT",
-  "main": "index.mjs",
   "name": "@taufik-nurrohman/tick",
   "repository": {
+    "directory": "tick",
     "type": "git",
-    "url": "git+https://github.com/taufik-nurrohman/tick.git"
+    "url": "git+https://github.com/taufik-nurrohman/packages.git"
   },
-  "version": "2.1.1"
+  "version": "3.0.0"
 }

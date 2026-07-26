@@ -1,6 +1,4 @@
 {
-  "author": "Taufik Nurrohman",
-  "bugs": "https://github.com/taufik-nurrohman/folder/issues",
   "dependencies": {
     "@taufik-nurrohman/is": "*"
   },
@@ -8,29 +6,24 @@
   "devDependencies": {
     "ava": "^8.0.1"
   },
-  "exports": {
-    "import": "./index.mjs",
-    "require": "./index.js"
-  },
+  "exports": "./index.mjs",
   "files": [
-    "index.js",
     "index.mjs"
   ],
-  "homepage": "https://taufik-nurrohman.js.org",
   "keywords": [
     "folder",
     "helper",
     "utility"
   ],
   "license": "MIT",
-  "main": "index.mjs",
   "name": "@taufik-nurrohman/folder",
   "repository": {
+    "directory": "folder",
     "type": "git",
-    "url": "git+https://github.com/taufik-nurrohman/folder.git"
+    "url": "git+https://github.com/taufik-nurrohman/packages.git"
   },
   "scripts": {
     "test": "ava test.mjs"
   },
-  "version": "1.0.1"
+  "version": "2.0.0"
 }
