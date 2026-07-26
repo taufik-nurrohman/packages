@@ -1,0 +1,41 @@
+{
+  "author": "Taufik Nurrohman",
+  "bugs": "https://github.com/taufik-nurrohman/pattern/issues",
+  "dependencies": {
+    "@taufik-nurrohman/is": "*",
+    "@taufik-nurrohman/to": "*"
+  },
+  "description": "Regular expression utility.",
+  "devDependencies": {
+    "ava": "^4.3.0"
+  },
+  "exports": {
+    "import": "./index.mjs",
+    "require": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "index.mjs"
+  ],
+  "homepage": "https://taufik-nurrohman.js.org",
+  "keywords": [
+    "expression",
+    "helper",
+    "pattern",
+    "regex",
+    "regexp",
+    "regular",
+    "utility"
+  ],
+  "license": "MIT",
+  "main": "index.mjs",
+  "name": "@taufik-nurrohman/pattern",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taufik-nurrohman/pattern.git"
+  },
+  "scripts": {
+    "test": "ava test.mjs"
+  },
+  "version": "1.0.1"
+}
